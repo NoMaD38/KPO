@@ -7,7 +7,6 @@ person = {
 const check = document.getElementById('check')
 const sumArgs = document.getElementById('sumProd')
 
-
 check.addEventListener('click',()=>{
     let password = document.getElementById('pas').value
     password === person.password ? alert('Пароль совпадет') : alert('Неверный пароль')
