@@ -64,19 +64,37 @@ class POJsOTeachers{
         return this;
     }
 
-    getDate(){
-        return this.date
+    getSubjects(){
+        return this.subjects.subject
     }
-    setDate(day){
-        this.date = day;
+
+    getSubject(num){
+        return this.subjects.subject[num]
+    }
+
+    getNumbSubjs(){
+        return this.number_subjects
+    }
+
+    getNumbSubj(){
+        return this.number_subject
+    }
+
+    setNumbSubj(NumSubj){
+        this.number_subject = NumSubj;
         return this;
     }
 
-    getClass(){
-        return this.class
+    getNumbStuts(){
+        return this.option.numb_stuts
     }
-    setClass(cabin){
-        this.class = cabin;
-        return this.class
+
+    getNumbStuts(){
+        return this.number_students
+    }
+
+    setNumbStuts(NumStuts){
+        this.number_students = NumStuts;
+        return this;
     }
 }
