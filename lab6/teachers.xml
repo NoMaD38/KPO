@@ -2,23 +2,47 @@
 <teachers>
 	<teacher>
 		<name>Ivanov I.I.</name>
-		<subject>Math</subject>
-		<subject>Programming</subject>
-		<number_subject>1</number_subject>
-		<number_subject>1</number_subject>
+		<subjects>
+			<subject>Math</subject>
+			<subject>Programming</subject>
+		</subjects>
+		<number_subjects>
+			<number_subject>1</number_subject>
+			<number_subject>1</number_subject>
+		</number_subjects>
+		<numb_stuts>
+			<number_students>15</number_students>
+			<number_students>18</number_students>
+		</numb_stuts>
 	</teacher>
 	<teacher>
 		<name>Petrov P.P.</name>
-		<subject>English</subject>
-		<subject>Physics</subject>
-		<number_subject>1</number_subject>
-		<number_subject>1</number_subject>
+		<subjects>
+			<subject>English</subject>
+			<subject>Physics</subject>
+		</subjects>
+		<number_subjects>
+			<number_subject>1</number_subject>
+			<number_subject>1</number_subject>
+		</number_subjects>
+		<numb_stuts>
+			<number_students>15</number_students>
+			<number_students>18</number_students>
+		</numb_stuts>
 	</teacher>
 	<teacher>
 		<name>Sidorov S.S.</name>
-		<subject>Math</subject>
-		<subject>PhysicalTraining</subject>
-		<number_subject>1</number_subject>
-		<number_subject>1</number_subject>
+		<subjects>
+			<subject>Math</subject>
+			<subject>PhysicalTraining</subject>
+		</subjects>
+		<number_subjects>
+			<number_subject>1</number_subject>
+			<number_subject>1</number_subject>
+		</number_subjects>
+		<numb_stuts>
+			<number_students>15</number_students>
+			<number_students>18</number_students>
+		</numb_stuts>
 	</teacher>
 </teachers>
