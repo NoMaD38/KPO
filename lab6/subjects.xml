@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<subjects>
+	<subject>
+		<name>Math</name>
+		<dayWeek>Monday</dayWeek>
+		<class>A506</class>
+	</subject>
+	<subject>
+		<name>English</name>
+		<dayWeek>Tuesday</dayWeek>
+		<class>D203</class>
+	</subject>
+	<subject>
+		<name>Programming</name>
+		<dayWeek>Friday</dayWeek>
+		<class>G120</class>
+	</subject>
+	<subject>
+		<name>PhysicalTraining</name>
+		<dayWeek>Thursday</dayWeek>
+		<class>B231</class>
+	</subject>
+	<subject>
+		<name>Physics</name>
+		<dayWeek>Friday</dayWeek>
+		<class>D501</class>
+	</subject>
+</subjects>

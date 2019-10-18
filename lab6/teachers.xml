@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<teachers>
+	<teacher>
+		<name>Ivanov I.I.</name>
+		<subject>Math</subject>
+		<subject>Programming</subject>
+		<number_subject>1</number_subject>
+		<number_subject>1</number_subject>
+	</teacher>
+	<teacher>
+		<name>Petrov P.P.</name>
+		<subject>English</subject>
+		<subject>Physics</subject>
+		<number_subject>1</number_subject>
+		<number_subject>1</number_subject>
+	</teacher>
+	<teacher>
+		<name>Sidorov S.S.</name>
+		<subject>Math</subject>
+		<subject>PhysicalTraining</subject>
+		<number_subject>1</number_subject>
+		<number_subject>1</number_subject>
+	</teacher>
+</teachers>
