@@ -1,11 +1,21 @@
 const fs = require('fs'),
     xml2js = require('xml2js'),
-    serialize = require('node-serialize');
+    serialize = require('node-serialize')
  
 var parser = new xml2js.Parser();
 fs.readFile('subjects.xml', function(err, data) {
     parser.parseString(data, function (err, result) {
-        console.dir(result)
+
+        var SerialObjS = serialize.serialize(result)
+        typeof SerialObjS === 'string'
+
+        console.dir(SerialObjS)
+        console.log('Done')
+
+        var DeserialObjS = serialize.serialize(SerialObjS)
+        typeof DeserialObjS === 'string'
+
+        console.dir(DeserialObjS)
         console.log('Done')
     });
 });
