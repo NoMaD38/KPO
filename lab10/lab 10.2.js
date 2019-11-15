@@ -137,6 +137,6 @@ class Generation{
         this.generator(this.data)
     }
     generator(data){
-        console.log('генерация объектного кода и занесение в буфер');
+        console.log('генерация объектного кода');
     }
 }
