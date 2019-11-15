@@ -1,23 +1,12 @@
-const start = ()=>{
-    let start = new Creator(`
-    var a,n,c,d:word;
-    begin
-       readln( a );
-       n:=1;
-       while ( n <= sqrt(a) ) do begin
-          c:=a mod n;
-          d:=a div n;
-          if c = 0 then begin
-             writeln( n );
-             if n <> d then writeln( d );
-          end;
-          inc( n );
-       end;
-    end.`
-    )
-}
 
-start()
+const comp = document.getElementById('obj_code')
+const result = document.getElementById('result')
+comp.addEventListener('click',()=>{
+    const code = document.getElementById('code').value
+    result.innerHTML = ''
+    console.log(code);
+    const start = new Creator(code)
+})
 
 class Creator{
     constructor(data){
@@ -43,17 +32,18 @@ class Regular{
     }
     regular () {
         let strings = this.data.replace(/\s{2,}/g, ' ')
-        console.log('регурные выражения');
+        result.insertAdjacentHTML('beforebegin',`регулярные выражения: ${strings} <br>`)
         return strings
     }
 }
 class Table_lex {
     constructor(data){
         this.data = data
-        this.table()
+        this.table(this.data)
     }
-    table(){
-        console.log('тут должна быть таблица идентификаторов')
+    table(data){
+        console.log('')
+        result.insertAdjacentHTML('beforebegin',`тут должна быть таблица лексем: ${data} <br>`)
     }
 }
 class Table_ident  {
@@ -61,11 +51,10 @@ class Table_ident  {
         this.data = data
         this.table()
     }
-    table(){
-        console.log('тут должна быть таблица идентификаторов');
+    table(data){
+        result.insertAdjacentHTML('beforebegin',`тут должна быть таблица идентификаторов<br>`)
     }
 }
-
 class Parser {
     constructor(data_lex,data_ident){
         this.data_lex = data_lex
@@ -81,7 +70,7 @@ class Check_error{
         this.error(this.data)
     }
     error(data){
-        console.log('тут должна быть проверка на ошибки');
+        result.insertAdjacentHTML('beforebegin',`тут должна быть проверка на ошибки <br>`)
     }
 }
 
@@ -91,7 +80,7 @@ class Output_tree{
         this.tree(this.data)
     }
     tree(data){
-        console.log('тут должно быть дерево вывода');
+        result.insertAdjacentHTML('beforebegin',`тут должно быть дерево вывода <br>`)
     }
 }
 
@@ -110,7 +99,7 @@ class Ternary{
         this.ternars(this.data)
     }
     ternars(data){
-        console.log('тут должнЫ быть триады');
+        result.insertAdjacentHTML('beforebegin',`тут должны быть триады <br>`)
     }
 }
 
@@ -121,6 +110,7 @@ class Optimization{
     }
     opt(data){
         console.log('тут должна быть проведена оптимизация');
+        result.insertAdjacentHTML('beforebegin',`тут должна быть проведена оптимизация <br>`)
     }
 }
 
@@ -137,6 +127,6 @@ class Generation{
         this.generator(this.data)
     }
     generator(data){
-        console.log('генерация объектного кода и занесение в буфер');
+        result.insertAdjacentHTML('beforebegin',`тут должна быть генерация кода <br>`)
     }
 }
