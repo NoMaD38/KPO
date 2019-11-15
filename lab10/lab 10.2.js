@@ -1,24 +1,26 @@
 const fs = require("fs")
 
-const buff = new Buffer.alloc(10)
-
-let read = fs.readFile("source.txt", "utf8", 
-            (error,data) => {
-                console.log("чтение файла");
-                if(error) throw error 
-                new Creator(data)
-            })
-class Regular{
-    constructor(data){
-        this.data = data
-        this.regular()
-    }
-    regular () {
-        let strings = this.data.replace(/\s{2,}/g, ' ')
-        console.log('регурные выражения');
-        return strings
-    }
+const start = ()=>{
+    let start = new Creator(`
+    var a,n,c,d:word;
+    begin
+       readln( a );
+       n:=1;
+       while ( n <= sqrt(a) ) do begin
+          c:=a mod n;
+          d:=a div n;
+          if c = 0 then begin
+             writeln( n );
+             if n <> d then writeln( d );
+          end;
+          inc( n );
+       end;
+    end.`
+    )
 }
+
+start()
+
 class Creator{
     constructor(data){
         this.data = data
@@ -34,6 +36,17 @@ class Lexer {
         const data_reg = new Regular(this.data)
         const data_lex = new Table_lex(data_reg)
         const data_ident = new Table_ident(data_reg)
+    }
+}
+class Regular{
+    constructor(data){
+        this.data = data
+        this.regular()
+    }
+    regular () {
+        let strings = this.data.replace(/\s{2,}/g, ' ')
+        console.log('регурные выражения');
+        return strings
     }
 }
 class Table_lex {
@@ -126,7 +139,6 @@ class Generation{
         this.generator(this.data)
     }
     generator(data){
-        buff = data 
         console.log('генерация объектного кода и занесение в буфер');
     }
 }
